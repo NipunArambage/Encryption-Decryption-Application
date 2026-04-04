@@ -1,3 +1,0 @@
-This is a confidential document that needs to be encrypted.
-It contains sensitive information that should be protected.
-The project will encrypt this file and then decrypt it back to original format.

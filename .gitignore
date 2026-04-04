@@ -1,0 +1,16 @@
+# Sensitive Security Keys
+keys/private.pem
+keys/public.pem
+
+# User Data (Don't track uploaded/processed files)
+data/*.txt
+data/*.bin
+original_document.txt
+sensitive_report.txt
+
+# Python Environment & Cache
+__pycache__/
+*.py[cod]
+venv/
+.env
+
