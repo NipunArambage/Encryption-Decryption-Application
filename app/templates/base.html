@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Encryption &amp; Decryption System</title>
+    <style>
+        :root 
+        {
+            --bg: #e9eaec;
+            --panel: #ffffff;
+            --border: #e2e2e2;
+            --title: #3c7bd9;
+            --primary: #2f78e2;
+            --primary-dark: #2462bb;
+            --danger: #e84545;
+            --danger-dark: #cc3737;
+            --text: #222;
+            --muted: #6d7175;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body 
+        {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(180deg, #f3f4f6 0%, var(--bg) 100%);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .app-shell 
+        {
+            width: min(980px, 100%);
+            background: #f7f7f8;
+            border: 1px solid #d9d9d9;
+            border-radius: 4px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+            padding: 18px;
+        }
+
+        .app-title 
+        {
+            text-align: center;
+            color: var(--title);
+            margin: 0 0 14px 0;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+        }
+
+        .divider {
+            height: 1px;
+            background: #d4d7dc;
+            margin-bottom: 18px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .panel {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 18px;
+        }
+
+        .panel h2 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .field-label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #30343a;
+        }
+
+        .file-field {
+            width: 100%;
+            margin-bottom: 14px;
+        }
+
+        .actions {
+            text-align: center;
+            margin-top: 4px;
+        }
+
+        button {
+            border: 0;
+            padding: 9px 20px;
+            border-radius: 2px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-danger {
+            background: var(--danger);
+            color: #fff;
+        }
+
+        .btn-danger:hover {
+            background: var(--danger-dark);
+        }
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .status {
+            margin-top: 12px;
+            font-size: 14px;
+            line-height: 1.45;
+            color: var(--muted);
+            word-break: break-word;
+        }
+
+        .status a {
+            color: #1861bf;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .status a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-action {
+            margin-top: 18px;
+            text-align: center;
+        }
+
+        @media (max-width: 820px) {
+            .app-title {
+                font-size: 24px;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="app-shell">
+        <h1 class="app-title">Mini Encryption &amp; Decryption System</h1>
+        <div class="divider"></div>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
